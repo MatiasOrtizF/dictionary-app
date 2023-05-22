@@ -1,7 +1,8 @@
 import {useState } from 'react';
 import Constants from 'expo-constants';
-import { StyleSheet, Text, TextInput, TouchableOpacity, View , ScrollView , Linking} from 'react-native';
+import { Text, TextInput, TouchableOpacity, View , ScrollView , Linking } from 'react-native';
 import DefinitionItems from './Definition-items'
+import styles from './Styled';
 
 export default function Main() {
 
@@ -23,7 +24,7 @@ export default function Main() {
     }
 
     return (
-        <ScrollView style={{marginTop: Constants.statusBarHeight}}>
+        <ScrollView style={{marginTop: Constants.statusBarHeight , backgroundColor:"#EEEEEE"}}>
             <View style={styles.container}>  
 
                 <TextInput 
@@ -41,8 +42,8 @@ export default function Main() {
 
                 {datas.length > 0 ?
                 <>
-                    <View style={{ backgroundColor: 'gray', height: 0.5}} />
-                    <Text style={{color:"gray"}}>Source</Text>
+                    <View style={styles.hr}/>
+                    <Text style={styles.title}>Source</Text>
                     <TouchableOpacity onPress={()=> openURL(datas[0].sourceUrls[0])}>
                         <Text style={{textDecorationLine:'underline'}}>{datas[0].sourceUrls[0]}</Text>   
                     </TouchableOpacity> 
@@ -55,20 +56,3 @@ export default function Main() {
         </ScrollView>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        justifyContent: 'center',
-        margin: 30
-    },
-    input: {
-        backgroundColor: "#DFDFDF", 
-        width: "100%", 
-        borderRadius: 10, 
-        paddingVertical: 5, 
-        paddingHorizontal: 15,
-        marginBottom: 15
-    },
-});

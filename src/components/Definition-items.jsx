@@ -10,7 +10,8 @@ export default function DefinitionItems(data) {
                 <View style={{ backgroundColor: 'gray', height: 1}} />
 
                 {data.meanings.map((data) => (
-                    <PartOfSpeech {...data}/>
+                    <PartOfSpeech {...data}
+                    />
                 ))}
             </View>
     );

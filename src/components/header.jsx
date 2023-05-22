@@ -1,11 +1,13 @@
 import {useState } from 'react';
-import { StyleSheet, Text , View , Image, TouchableWithoutFeedback } from 'react-native';
+import { Text , View , Image, TouchableWithoutFeedback } from 'react-native';
+import styles from './Styled';
 
 export default function Header(data) {
     const [play, setPlay] = useState(true);
 
     playAudio = () => {
         setPlay(!play)
+        // console.log(audio)
     }
 
     return (
@@ -24,12 +26,3 @@ export default function Header(data) {
             </View>
     );
 }
-
-const styles = StyleSheet.create({
-    header: {
-        flexDirection: "row", 
-        alignItems: "center", 
-        justifyContent: "space-between",
-        marginBottom: 15
-    },
-});
