@@ -1,5 +1,5 @@
-import { Text , View } from 'react-native';
-import styles from './Styled';
+import { Text, View } from 'react-native';
+import styles from '../Styled';
 import DefinitionList from './Definition-list';
 
 export default function PartOfSpeech(data) {
@@ -11,8 +11,8 @@ export default function PartOfSpeech(data) {
                     <Text style={styles.title}>Meaning</Text>
                         <View style={{marginVertical: 5}}>
 
-                            {data.definitions.map((def) => (
-                                <DefinitionList {...def}/>
+                            {data.definitions.map((def, index) => (
+                                <DefinitionList key={index} {...def}/>
                             ))}   
 
                         </View>
