@@ -1,11 +1,6 @@
 # [_**Dictionary**_](https://github.com/MatiasOrtizF/dictionary-app "Live app")
 
-## Password Generator
-Generador de contraseñas seguras con números y símbolos incluidos. <br>
-Hecha con React, Tailwind CSS y mucho amor 💜
-
-
-## Contraseñas seguras
+## Dictionary
 
 "Password Generator" es una aplicación diseñada para proporcionar definiciones, significados, pronunciaciones y otras informaciones relacionadas con palabras.
 
